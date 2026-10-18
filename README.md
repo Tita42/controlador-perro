@@ -39,6 +39,23 @@ Opciones:
 | `--cooldown` | 15 | segundos mínimos entre sonidos |
 | `--camara` | 0 | índice de la webcam |
 | `--mostrar` | off | ventana con las detecciones (necesita pantalla; `q` para salir) |
+| `--puerto` | 8000 | puerto del servidor web con el video; `0` lo apaga |
+
+## Ver el video desde el navegador
+
+Mientras el detector corre, la Raspberry publica el video en vivo con los recuadros de detección. Desde cualquier compu o celular de la misma red abrí:
+
+```
+http://<ip-de-la-raspberry>:8000/
+```
+
+(El script imprime la dirección al arrancar; también suele andar `http://raspberrypi.local:8000/`.)
+
+- `/` — página con el video
+- `/stream` — stream MJPEG directo (sirve para VLC u otras apps)
+- `/foto.jpg` — la última imagen
+
+No tiene contraseña: no abras el puerto a internet en el router.
 
 ## Que arranque solo al prender la Raspberry
 
