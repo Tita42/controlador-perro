@@ -1,0 +1,10 @@
+# Entorno virtual (cada quien crea el suyo)
+venv/
+.venv/
+
+# Modelos (detector_perro.py los descarga solo la primera vez)
+modelos/
+
+__pycache__/
+*.pyc
+.DS_Store
